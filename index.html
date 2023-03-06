@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/img/logo.png" alt="" class="header-logo">
+        <div class="add-item" id="open-input">
+            <img src="./assets/img/add.png" alt="" class="add">
+            <span>New item</span>
+        </div>
+    </header>
+    <div class="main">
+        <div class="all-container">
+
+
+            <div class="todo-container">
+                <div class="todo-list-header">
+                    <span>Todo</span>
+                    <div class="todo-list-count">
+                        <p id="todo-list-count-text">1</p>
+                    </div>
+                </div>
+                <div class="line todo-line"></div>
+				<div  id="todo-list" class="todo-container-list">
+
+					<!-- <div class="todo-list">
+						<div class="todo-item">
+							<div class="todo-item-header">
+								<span class="todo-item-header-category">maketing</span>
+								<div class="too-item-header-action">
+									<img src="./assets/img/edit.png" alt="" class="edit">
+									<img src="./assets/img/del.png" alt="" class="del">
+								</div>
+							</div>
+							<p class="todo-title">dvsjdvbksdjvbksjdbv</p>
+							<div class="line-item"></div>
+							<p class="todo-content">
+								dlvnsdvnlsdvnlksdnvklsdnvklsndvlknsdlkn
+							</p>
+							<div class="time">
+								<img src="./assets/img/clock.png" alt=" " class="clock">
+							<p class="time-text">21:22</p>
+							</div>
+						</div>
+					</div>
+					 -->
+				</div>
+                
+
+				
+            </div>
+
+
+            <div class="todo-container ">
+                <div class="todo-list-header doing">
+                    <span>Doing</span>
+                    <div class="todo-list-count doing-count">
+                        <p id="doing-list-count-text">0</p>
+                    </div>
+                </div>
+                <div class="line todo-line" style=" background-color: #e1d174;"></div>
+
+				<div  id="doing-list">
+					<div class="todo-list">
+						<div class="todo-item">
+							<div class="todo-item-header">
+								<span class="todo-item-header-category">maketing</span>
+								<div class="too-item-header-action">
+									<img src="./assets/img/edit.png" alt="" class="edit">
+									<img src="./assets/img/del.png" alt="" class="del">
+								</div>
+							</div>
+							<p class="todo-title">dvsjdvbksdjvbksjdbv</p>
+							<div class="line-item"></div>
+							<p class="todo-content">
+								dlvnsdvnlsdvnlksdnvklsdnvklsndvlknsdlkn
+							</p>
+							<div class="time">
+								<img src="./assets/img/clock.png" alt=" " class="clock">
+							<p class="time-text">21:22</p>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+                
+            </div>
+
+            
+            <div class="todo-container ">
+                <div class="todo-list-header done">
+                    <span>Finish</span>
+                    <div class="todo-list-count done-count">
+                        <p id="done-list-count-text">0</p>
+                    </div>
+                </div>
+                <div class="line todo-line" style="background-color: #3cc057;"></div>
+				<div  id="done-list">
+					<div class="todo-list">
+						<div class="todo-item">
+							<div class="todo-item-header">
+								<span class="todo-item-header-category">maketing</span>
+								<div class="too-item-header-action">
+									<img src="./assets/img/edit.png" alt="" class="edit">
+									<img src="./assets/img/del.png" alt="" class="del">
+								</div>
+							</div>
+							<p class="todo-title">dvsjdvbksdjvbksjdbv</p>
+							<div class="line-item"></div>
+							<p class="todo-content">
+								dlvnsdvnlsdvnlksdnvklsdnvklsndvlknsdlkn
+							</p>
+							<div class="time">
+								<img src="./assets/img/clock.png" alt=" " class="clock">
+							<p class="time-text">21:22</p>
+							</div>
+						</div>
+					</div>
+				</div>
+                
+            </div>
+
+        </div>
+        <div class="popup-input disable" id="popup-input">
+            <div class="input-bg" onclick="closeInput()"></div>
+            <div class="popup-content-container">
+                <div class="popup-content">
+                    <p class="input-title">Add new todo</p>
+                <input placeholder="Category" type="text" name="" id="category" required class="input">
+                <input placeholder="Title" type="text" name="" id="title" required class="input">
+                <input placeholder="Content" type="text" name="" id="content" required class="input">
+                <button id="add-todo" type="submit">submit</button>
+                <span class="close" id="close-popup-input">x</span>
+                </div>
+            </div>
+        </div>
+
+
+		<div class="popup-input disable" id="popup-edit">
+            <div class="input-bg" onclick="closeEdit()"></div>
+            <div class="popup-content-container">
+                <div class="popup-content">
+                    <p class="input-title">Add new todo</p>
+                <input placeholder="Category" type="text" name="" id="category-edit" required class="input">
+                <input placeholder="Title" type="text" name="" id="title-edit" required class="input">
+                <input placeholder="Content" type="text" name="" id="content-edit" required class="input">
+				<div class="combo">
+					<div class="checkbox"><input type="checkbox" value="todo" name="todo" class="choosetype" onchange="choose(0)"> <label for="todo">To do</label></div>
+				<div class="checkbox"><input type="checkbox" value="doing" name="doing" class="choosetype" onchange="choose(1)"><label for="doing">Doing</label></div>
+				<div class="checkbox"><input type="checkbox" value="done" name="done" class="choosetype" onchange="choose(2)"><label for="done">Done</label></div>
+				</div>
+				<button id="add-todo-edit" type="submit">submit</button>
+                <span class="close" id="close-popup-edit">x</span>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>
